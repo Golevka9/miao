@@ -9,9 +9,11 @@
       /* 不得改变页面的任何html结构 */
       body>p:first-child {color: red;}
 
+      
+      body>p:nth-child(2):focus {color: blue;}
       body>p:nth-child(2):hover {color: red;}
       body>p:nth-child(2):active {color: green;}
-      body>p:nth-child(2):focus {color: blue;}
+      
 
       span {color: red;}
       span>span {color: green;}
@@ -19,7 +21,7 @@
 
       a:visited {color: orange;}
       a:link {color: pink;}
-      a[href*="mailto"] {color: blue;}
+      a[href*="mailto:"] {color: blue;}
       a[href*="tel"] {color: yellow;}
       a[href$=".pdf"],a[href$=".PDF"] {font-size: 30px;}
 
@@ -30,11 +32,10 @@
       .b>ul:nth-child(4)>li:nth-child(n+35):nth-child(-n+50) {color: blue;}
       
       .b>ul:nth-child(2)>li:nth-child(2n+4) {color: pink;}
-      .b>ul:nth-child(2)>li:nth-child(3n+6) {color: pink;}
-      .b>ul:nth-child(2)>li:nth-child(5n+10) {color: pink;}
-      .b>ul:nth-child(2)>li:nth-child(7n+14) {color: pink;}
-      .b>ul:nth-child(2)>li:nth-child(11n+22) {color: pink;}
-      .b>ul:nth-child(2)>li:nth-child(1) {color: pink;}
+      .b>ul:nth-child(2)>li:nth-child(3n+9) {color: pink;}
+      .b>ul:nth-child(2)>li:nth-child(5n+25) {color: pink;}
+      .b>ul:nth-child(2)>li:nth-child(7n+49) {color: pink;}
+    
       
 
     </style>
