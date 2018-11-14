@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    * {box-sizing: border-box;}
+ul{
+  list-style-type:none;
+  margin:0px;
+  padding: 0px;
+}
+li{
+  background-color: olive;
+  border: 1px solid;
+  width: 50px;
+  height: 50px; 
+  display: flow-root;
+}
+li:nth-child(n+4) {
+  margin-left: 50px;
+  
+}
+li:nth-child(n+7) {
+  margin-left: 100px;
+}
+li:nth-child(3n+4) {
+  margin-top: -150px
+}
+div {
+  height:100%
+}
+div:hover {
+  background-color:gold;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  z-index: 5;
+  margin-top: -10px;
+  height: calc(100% + 20px);  
+}
+  </style>
+</head>
+<body>
+<ul>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+</ul>
+</body>
+</html>
