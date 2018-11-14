@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>块元素</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {
+      
+      margin:auto;
+    }
+    p {margin: 0 calc(50% - 300px);
+      margin-bottom: 15px;
+    }
+    section { width: 600px;
+              margin-left: auto;
+              margin-right: auto;
+    }
+    header {
+      color: white;
+      background-color: black;
+      
+    }
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+    li {
+      width: 180px;
+      height: 40px;
+      border: 3px solid;
+      background-color: pink;
+      float: left;
+      text-align: center;
+      margin-right: 30px;
+      margin-bottom: 15px;
+      line-height: 34px;
+    }
+    li:hover { background-color: red; }
+    li:nth-child(3n) {margin-right: 0;}
+    dd {margin: 0px;
+        padding: 0px;
+        border-bottom: 1px dotted;
+    }
+    dd:last-child {border-bottom: none;}
+    footer {
+      background-color: #EE82EE;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header><p>hello world 请调整浏览器窗口大小查看效果</p></header>
+  <section>
+  <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px</p>
+  <ul>
+    <li>宽180高40(包含边框)</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>水平间隙30px</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>垂直间隙15px</li>
+    <li>产品</li>
+    <li>产品</li>
+    <li>边框宽度3px</li>
+    <li>产品</li>
+    <li>产品</li>
+  </ul>
+  <dl>
+    <dd>link</dd>
+    <dd>link</dd>
+    <dd>link</dd>
+    <dd>link</dd>
+    <dd>link</dd>
+  </dl>
+  </section>
+  <footer>©版权所有<br>
+          本页所有布局均使用块元素</footer>
+
+</body>
+</html>
