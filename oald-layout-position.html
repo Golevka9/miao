@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Oald 7</title>
+  <style>
+    * {
+      box-sizing: inherit;
+    }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 0;
+      box-sizing: border-box;
+    }
+
+    body * {
+      font-size: initial;
+      vertical-align: top;
+    }
+
+    #oald,#vocabulary,#history{
+      xdisplay: inline-block;
+      background-color: #EAEEF3;
+      overflow: scroll;
+      min-width: 200px;
+      width: 20%;
+      padding-left: 10px;
+      height: 100%;
+      border-right: 2px solid;
+    }
+    #history {border-right: none;}
+    #history h1 {display: inline-block;}
+
+    #main {
+      xdisplay: inline-block;
+      xwidth: 400px;
+      width: 40%;
+      height: 100%;
+      border-right: 2px solid;
+      overflow: hidden;
+    }
+    
+    #mainTitle { 
+      height: 20%;
+      border-bottom: 2px solid;
+    }
+    #mainTitle h1 { color: #50637E;}
+/*练习position布局*/
+    #oald {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    #vocabulary {
+      position: absolute;
+      top:0;
+      left: 60%;
+    }
+    #history{
+      position: absolute;
+      top:0;
+      left: 80%;
+    }
+    body {position: relative;}
+    #main{
+      position: absolute;
+      top: 0;
+      left: 20%;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div id="oald">
+    <h1>OALD SEVEN</h1>
+    <input type="search" id="site-search" name="q">
+    <input type="buttom">
+    <ul>
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+       <li>5</li>
+       <li>6</li>
+       <li>7</li>
+       <li>8</li>
+       <li>9</li>
+       <li>10</li>
+     </ul> 
+  </div>
+  <div id="main">
+    <div id="mainTitle"><h1>Cat</h1></div>
+    <div id="mainContent">
+      <dl>
+        <dt>cat</dt>
+        <dd>lorem</dd>
+        <dd>lorem</dd>
+        <dd>lorem</dd>
+        <dd>lorem</dd>
+        <dd>lorem</dd>
+        <dd>lorem</dd>
+      </dl>
+    </div>
+  </div>
+  <div id="vocabulary">
+    <h1>Vocabulary</h1>
+    <input type="search" id="v-search" name="q">
+    <input type="buttom">
+  </div>
+  <div id="history">
+    <input type="reset">
+    <h1>History</h1>
+    <input type="search" id="h-search" name="q">
+    <input type="buttom">
+    <ul>
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+       <li>5</li>
+       <li>6</li>
+       <li>7</li>
+       <li>8</li>
+       <li>9</li>
+       <li>10</li>
+     </ul> 
+  </div>
+</body>
+</html>
