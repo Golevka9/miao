@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+}
+
+ul li {
+  position: relative;
+  white-space: nowrap;
+  padding: 0 10px;
+  float: left;
+}
+
+ul ul li {
+ visibility: hidden;
+ transition: visibility 0.5s 0.4s;
+}
+ul ul ul  {
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  
+}
+
+ul ul {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+li:hover > ul > li {
+  visibility: visible;
+}
+
+li:hover {
+  background-color: orange;
+}
+  </style>
+</head>
+<body>
+<div>
+<ul>
+  <li>休闲</li>
+  <li>学习
+    <ul>
+      <li>前端
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JAVASCRIPT</li>
+        </ul></li>
+      <li>英语
+      <ul>
+        <li>阅读</li>
+        <li>写作</li>
+      </ul></li>
+    </ul></li>
+  <li>体育
+    <ul>
+      <li>篮球</li>
+      <li>足球</li>
+    </ul></li>
+  <li>音乐
+    <ul>
+    <li>classic
+      <ul>
+        <li>Beethoven</li>
+        <li>Chopin</li>
+      </ul></li>
+    <li>pop</li>
+  </ul></li>
+  <li>舞蹈</li>
+</ul>
+</div>
+</body>
+</html>
