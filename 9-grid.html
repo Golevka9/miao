@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Refresh" content="3" />
+  <title>Document</title>
+  <style>
+  * { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    width: 150px;
+    height: 150px;
+  }
+  ul li { 
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 3px solid blue;
+    text-align: center;
+    line-height: 50px;
+    margin-right: -2px;
+    margin-bottom: -2px;
+    z-index: 0;
+  }
+
+  li:hover {
+    border-color: red;
+    z-index: 1;
+  }
+/*表格元素九宫格*/
+td {
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+  vertical-align: middle;
+}
+
+col,tr {
+  border: 5px solid blue;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td:hover {
+  border: 5px solid red;
+}
+  
+  </style>
+</head>
+<body>
+  <ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ul>
+<hr>
+<table>
+  <col>
+  <col>
+  <col>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+</table>
+</body>
+</html>
