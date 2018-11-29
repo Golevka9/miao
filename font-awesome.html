@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    @font-face {
+  font-family: 'FontAwesome';
+  src: url('./fontawesome-webfont.woff2');
+}
+
+i { 
+  font-family: 'FontAwesome';
+  font-style: normal;
+  display: block;
+}
+
+.star::before {
+  content: '\f005'
+}
+
+.film::before {
+  content: '\f008'
+}
+
+.male::before {
+  content: '\f222'
+}
+
+.heart::before {
+  content: '\f004'
+}
+
+.power::before {
+  content: '\f011'
+}
+/*Larger Icons*/
+.film-lg {
+  font-size: 1.33em;
+}
+.film-2x {
+  font-size: 2em;
+}
+.film-4x {
+  font-size: 4em;
+}
+/*Fixed Width Icons*/
+.male-fw {
+  width: 1.3em;
+  text-align: center;
+}
+/*List Icons*/
+.heart-ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 2em; 
+}
+.heart-ul > li {
+  position: relative;
+}
+.heart-li {
+  position: absolute;
+  left: -2em;
+  width: 2em;
+  text-align: center;
+  top: 0.14em;
+}
+/*Bordered & Pulled Icons*/
+.power-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+.power-pull-left {
+  float: left;
+}
+.power-pull-right {
+  float: right;
+}
+  </style>
+</head>
+<body>
+  <i class="star"></i>
+  <hr>
+  <i class="film film-lg"></i>
+  <i class="film film-2x"></i>
+  <i class="film film-4x"></i>
+  <hr>
+  <a href=""><i class="star film-2x"></i>这个没有定宽度</a>
+  <a href=""><i class="male male-fw  film-2x"></i>哲学</a>
+  <a href=""><i class="power male-fw  film-2x"></i>问题</a>
+  <hr>
+  <ul class="heart-ul">
+    <li><i class="heart heart-li"></i>aaa</li>
+    <li><i class="star heart-li"></i>bbb</li>
+    <li><i class="power heart-li"></i>ccc</li>
+  </ul>
+  <hr>
+  <i class="power power-pull-left power-border film-lg"></i>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic adipisci explicabo libero, numquam excepturi. Rem incidunt tempore alias nesciunt saepe reiciendis tenetur, porro! Dolorum nostrum quam necessitatibus harum recusandae illum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas aut, delectus tenetur magnam, fugiat nesciunt quidem. In culpa totam, perspiciatis, quam molestiae tempora cupiditate repellendus enim magnam ullam dolore voluptates.
+</body>
+</html>
