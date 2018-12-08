@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    
+
+div {
+  animation: foo 6s 1s 2 alternate;
+  color: #f35626;
+  animation: hue 1s linear;
+  font-size:4rem;
+}
+/* BounceInRight */
+div:hover {
+  animation-play-state: paused;
+}
+@keyframes hue {
+  from {
+    margin-left: 100%;
+  }
+  86% {
+    margin-left: -6%;
+  }
+  90% {
+    margin-left: 6%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+main {
+  animation: foo 0.4s 11s linear;
+  font-size:4rem;
+  color:#feab3a;
+}
+@keyframes foo {
+  from {
+    margin-top: 0;
+  }
+  60% {
+    margin-top: -8%;
+  }
+  75% {
+    margin-top: 0;
+  }
+  90% {
+    margin-top: 7%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+aside {
+  
+  color:purple;
+  font-size:4rem;
+  animation: bar 1s 6s linear;
+}
+@keyframes bar {
+  from {
+    opacity:0;
+  }
+  55% {
+    opacity:1;
+  }
+  75% {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+nav {
+  color:grey;
+  font-size:4rem;
+  animation: pulse 1.2s 9s linear;
+}
+@keyframes pulse {
+  25% {
+    font-size:4.5rem;
+  }
+  75% {
+    font-size:4rem;
+  }
+}
+artcle {
+  color:lightblue;
+  font-size:4rem;
+  animation: rotatein 1.2s 3s linear;
+  float: left;
+}
+artcle::after{clear:both;}
+@keyframes rotatein {
+  from {
+    opacity:0;
+  }
+  5 {
+    opacity: 0.1;
+    transform: rotateZ(30deg)}
+  25% {
+    opacity: 0.3;
+    transform: rotateZ(90deg)
+  }
+  40% {
+    opacity: 0.3;
+    transform: rotateZ(150deg)
+  }
+  55% {
+    opacity: 0.5;
+    transform:rotateZ(210deg)
+  }
+  70% {
+    opacity: 0.6;
+    transform:rotateZ(260deg)
+  }
+  85% {
+    opacity: 0.8;
+    transform:rotateZ(320deg)
+  }
+  to {  
+    opacity: 0.1;
+    transform:rotateZ(360deg)
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+<div>BounceInRight</div>
+<aside>Flash</aside>
+<nav>Pulse</nav>
+<main>Bounce</main>
+<artcle>RotateIn</artcle>
+
+</header>
+</body>
+</html>
