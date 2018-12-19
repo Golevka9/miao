@@ -263,3 +263,135 @@
     console.log(2**n)
 
 </script>
+
+<script id="ch0104/01" type="ch0104/01">
+    var n = Number(prompt("Number: ", "1"))
+    if (n > 0) {
+        console.log("positive")
+    }
+    if (n = 0) {
+        console.log("zero")
+    }
+    if (n < 0) {
+        console.log("negative")
+    }
+</script>
+
+<script id="ch0104/02" type="ch0104/02">
+    var f = Number(prompt("Number: ", "-3.14"))
+    if (f > 0) {
+        f = "-" + f.toString()
+    } else if (f < 0) {
+        f = (f.toString()).substring(1)
+    }
+    console.log(f)
+
+</script>
+
+<script id="ch0104/03" type="ch0104/03">
+    var n = Number(prompt("Number: ", "5"))
+    if (n % 2 == 0) {
+        console.log("even")
+    } else {
+        console.log("odd")
+    }
+</script>
+
+<script id="ch0104/04" type="ch0104/04">
+    var n = prompt("Code: ", "A")
+    var nASCII = n.charCodeAt()
+    if (nASCII % 2 == 0) {
+        console.log("even")
+    } else {
+        console.log("odd")
+    }
+
+</script>
+
+<script id="ch0104/05" type="ch0104/05">
+    var x = Number(prompt("Number: ", "1000"))
+    var y = Number(prompt("Number: ", "100"))
+    if (x > y) {
+        console.log(">")
+    } else if (x = y) {
+        console.log("=")
+    } else {
+        console.log("<")
+    }
+</script>
+
+<script id="ch0104/06" type="ch0104/06">
+    var a = Number(prompt("Number: ", "54"))
+    if (a >= 0 && a <= 99) {
+        console.log(1)
+    } else {
+        console.log(0)
+    }
+</script>
+
+<script id="ch0104/07" type="ch0104/07">
+    var a = Number(prompt("Number: ", "11"))
+    var b = Number(prompt("Number: ", "19"))
+    if (a >= 10 || b >= 20) {
+        console.log(1)
+    } else {
+        console.log(0)
+    }
+</script>
+
+<script id="ch0104/08" type="ch0104/08">
+    var n = Number(prompt("Number: ", "15"))
+    if (n % 3 == 0 && n % 5 == 0) {
+        console.log("YES")
+    } else {
+        console.log("NO")
+    }
+</script>
+
+<script id="ch0104/09" type="ch0104/09">
+    var n = Number(prompt("Number: ", "105"))
+    if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
+        console.log(3, 5, 7)
+    } else if (n % 3 == 0 && n % 5 == 0) {
+        console.log(3, 5)
+    } else if (n % 3 == 0 && n % 7 == 0) {
+        console.log(3, 7)
+    } else if (n % 5 == 0 && n % 7 == 0) {
+        console.log(5, 7)
+    } 
+    if (n % 3 != 0 && n % 5 != 0 && n % 7 != 0) {
+        console.log("n")
+    }
+</script>
+
+<script id="ch0104/10" type="ch0104/10">
+    var a = Number(prompt("Number: ", "50"))
+    var b = Number(prompt("Number: ", "80"))
+    if (a < 60 || b < 60) {
+        console.log(1)
+    } else {
+        console.log(0)
+    }
+</script>
+
+<script id="ch0104/11" type="ch0104/11">
+    var d = Number(prompt("Date: ", "2"))
+    if (d != 1 && d != 3 && d != 5) {
+        console.log("YES")
+    } else {
+        console.log("NO")
+    }
+</script>
+
+<script id="ch0104/12" type="ch0104/12">
+    var m = Number(prompt("m: ", "120"))
+    rideTime = (27 + 23) + (m / 3)
+    walkTime = (m / 1.2)
+    if (rideTime > walkTime) {
+        console.log("Walk")
+    } else if (rideTime < walkTime) {
+        console.log("Bike")
+    } else {
+        console.log("All")
+    }
+</script>
