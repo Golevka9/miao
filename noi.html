@@ -1,15 +1,15 @@
-<script id="ch0101/01" type="ch0101/01">
+<script id="ch0101/01" id="ch0101/01" type="ch0101/01">
     console.log("Hello, World!");
 </script>
 
-<script type="ch0101/02">
+<script id="ch0101/02" type="ch0101/02">
     var a = prompt("Number: ", "123")
     var b = prompt("Number: ", "456")
     var c = prompt("Number: ", "789")
     console.log(b)
 </script>
 
-<script type="ch0101/03">
+<script id="ch0101/03" type="ch0101/03">
     var counter = 0
     while (counter < 1) {
         counter ++
@@ -32,17 +32,17 @@
     
 </script>
 
-<script type="ch0101/04">
+<script id="ch0101/04" type="ch0101/04">
     var x = 12.34521
     console.log(x.toFixed(3))
 </script>
 
-<script type="ch0101/05">
+<script id="ch0101/05" type="ch0101/05">
     var d = 3.1415926535798932
     console.log(d.toFixed(12))
 </script>
 
-<script type="ch0103/01">
+<script id="ch0103/01" type="ch0103/01">
     var a = +prompt("Number: ", "1")
     a = a - a % 1
     var b = +prompt("Number: ", "2") 
@@ -50,40 +50,40 @@
     console.log(a + b)
 </script>
 
-<script type="ch0103/02">
+<script id="ch0103/02" type="ch0103/02">
     var a = Number(prompt("Number: ", "2"))
-    if (a > - 10000 && a < 10000) {
-        a=a
+    while (a < - 10000 || a > 10000) {
+        a = prompt("InValid Number: ", "")
     }
     var b = Number(prompt("Number: ", "3"))
-    if (b > - 10000 && b < 10000) {
-        b=b
+    if (b < - 10000 || b > 10000) {
+        b = prompt("InValid Number: ", "")
     }
     var c = Number(prompt("Number: ", "5"))
-    if (c > - 10000 && c < 10000) {
-        c=c
+    if (c < - 10000 || c > 10000) {
+        c = prompt("InValid Number: ", "")
     }
     console.log((a + b) * c)
 </script>
 
-<script type="ch0103/03">
+<script id="ch0103/03" type="ch0103/03">
     var a = Number(prompt("Number: ", "1"))
-    if (a > - 10000 && a < 10000) {
-        a=a
+    while (a < - 10000 || a > 10000) {
+        a = prompt("InValid Number: ", "")
     }
     var b = Number(prompt("Number: ", "1"))
-    if (b > - 10000 && b < 10000) {
-        b=b
+    while (b < - 10000 || b > 10000) {
+        b = prompt("InValid Number: ", "")
     }
     var c = Number(prompt("Number: ", "3"))
-    if (c > - 10000 && c < 10000  && c != 0) {
+    if (c < - 10000 || c > 10000  || c = 0) {
         c=c
     }
     var x = ((a + b) / c)
     console.log(x - x % 1)
 </script>
 
-<script type="ch0103/04">
+<script id="ch0103/04" type="ch0103/04">
     var a = Number(prompt("被除数", "10"))
     var b = Number(prompt("除数", "3"))
     var aInt = (a / b) - (a / b) % 1
@@ -91,21 +91,21 @@
     console.log(aInt, aRemainder)
 </script>
 
-<script type="ch0103/05">
+<script id="ch0103/05" type="ch0103/05">
     var a = Number(prompt("分子", "5"))
     var b = Number(prompt("分母", "7"))
     var x = (a / b)
     console.log(x.toFixed(9))
 </script>
 
-<script type="ch0103/06">
+<script id="ch0103/06" type="ch0103/06">
     var a = Number(prompt("确诊数", "10433"))
     var b = Number(prompt("死亡数", "60"))
     var x = ((b / a)*100).toFixed(3) + "%"
     console.log(x)
 </script>
 
-<script type="ch0103/07">
+<script id="ch0103/07" type="ch0103/07">
 
     var x = Number(prompt("Number: ","2.31"))
     var a = Number(prompt("Number: ", "1.2"))
@@ -116,19 +116,19 @@
     console.log(fx)
 </script>
 
-<script type="ch0103/08">
+<script id="ch0103/08" type="ch0103/08">
     var f = Number(prompt("Number: ", "41"))
-    if (f >=-459.67) {
-        f=f
+    while (f < -459.67) {
+        f = prompt("InValid Number: ", "")
     }
     var c = ((5 * (f - 32)) / 9).toFixed(5)
     console.log(c)
 </script>
 
-<script type="ch0103/09">
-    var r = Number(prompt("Number: ", 3.0))
-    if (r > 0 && r <= 10000) {
-        r=r
+<script id="ch0103/09" type="ch0103/09">
+    var r = Number(prompt("Number: ", "3.0"))
+    while (r < 0 || r > 10000) {
+        r = prompt("InValid Number: ", "")
     }
     var diameter = (r * 2).toFixed(4)
     var perimeter = (diameter * Math.PI).toFixed(4)
@@ -136,33 +136,33 @@
     console.log(diameter, perimeter, area)
 </script>
 
-<script type="ch0103/10">
+<script id="ch0103/10" type="ch0103/10">
     var r1 = Number(prompt("Number: ","1"))
     var r2 = Number(prompt("Number: ", "2"))
     var R = (1 / (((1 / r1)+(1 / r2)))).toFixed(2)
     console.log(R)
 </script>
 
-<script type="ch0103/11">
+<script id="ch0103/11" type="ch0103/11">
     var a = Number(prompt("Number: ","73.263"))
     var b = Number(prompt("Number: ", "0.9973"))
     var r = (a % b).toFixed(4)
     console.log(r)
 </script>
 
-<script type="ch0103/12">
+<script id="ch0103/12" type="ch0103/12">
     var r = Number(prompt("Number: ","4"))
     var pi = 3.14
     var v = ((4 / 3) * pi * r**3).toFixed(2)
     console.log(v)
 </script>
 
-<script type="ch0103/13">
+<script id="ch0103/13" type="ch0103/13">
     var a = prompt("Number: ", "100")
     console.log(a.split("").reverse().join(""))
 </script>
 
-<script type="ch0103/14">
+<script id="ch0103/14" type="ch0103/14">
     var h = Number(prompt("Number: ","23"))
     var r = Number(prompt("Number: ", "11"))
     var litre = Math.floor((Math.PI * r**2 * h)/ 1000)
@@ -175,7 +175,7 @@
     console.log(counter + 1)
 </script>
 
-<script type="ch0103/15">
+<script id="ch0103/15" type="ch0103/15">
     var n = Number(prompt("Total: ","10"))
     var x = Number(prompt("Eatingspeed: ", "4"))
     var y = Number(prompt("leftTime: ", "9"))
@@ -192,7 +192,7 @@
     console.log(leftApple)
 </script>
 
-<script type="ch0103/16">
+<script id="ch0103/16" type="ch0103/16">
     var xa = Number(prompt("xa: ", "1"))
     var ya = Number(prompt("ya: ", "1"))
     var xb = Number(prompt("xb: ", "2"))
@@ -213,7 +213,7 @@
     console.log(ab)
 </script>
 
-<script type="ch0103/17">
+<script id="ch0103/17" type="ch0103/17">
     var x1 = Number(prompt("x1: ", "0"))
     var y1 = Number(prompt("y1: ", "0"))
     var x2 = Number(prompt("x2: ", "4"))
@@ -228,14 +228,38 @@
     console.log(s)
 </script>
 
-<script type="ch0103/18">
-    
+<script id="ch0103/18" type="ch0103/18">
+    var a1 = Number(prompt("Number: ", "1"))
+    while (a1 < -100) {
+        a1 = prompt("InValid Number: ", "")
+    }
+    var a2 = Number(prompt("Number: ", "4"))
+    while (a2 > 100) {
+        a2 = prompt("InValid Number: ", "")
+    }
+    var n = Number(prompt("Number: ", "100"))
+    while (n < 0 || n > 1000) {
+        n = prompt("InValid Number: ", "")
+    }
+    var d = a2 - a1
+    var an = a1 + (n - 1) * d
+    console.log(an)
 </script>
 
-<script type="ch0103/19">
-    
+<script id="ch0103/19" type="ch0103/19">
+    var a = Number(prompt("Number: ", "3"))
+    var b = Number(prompt("Number: ", "4"))
+    while (a < 1) {
+        a = prompt("a InValid Number: ", "")
+    }
+    while(b > 50000) {
+        b = prompt("b InValid Number: ", "")
+    }
+    console.log(a * b)
 </script>
 
-<script type="ch0103/20">
+<script id="ch0103/20" type="ch0103/20">
+    var n = Number(prompt("Number: ", "3"))
+    console.log(2**n)
     
 </script>
