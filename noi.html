@@ -297,7 +297,7 @@
     }
 </script>
 
-<script id="ch0104/04" xtype="ch0104/04">
+<script id="ch0104/04" type="ch0104/04">
     var n = prompt("Code: ", "A")
     var nASCII = n.charCodeAt()
     if (nASCII % 2 == 0) {
@@ -394,4 +394,127 @@
     } else {
         console.log("All")
     }
+</script>
+
+<script id="ch0104/13" type="ch0104/13">
+    var x = Number(prompt("x: ", "1.0"))
+    var y
+    if (x >= 0 && x < 5) {
+        y = -x + 2.5
+    } else if (x >=5 && x < 10) {
+        y=2-1.5(x-3)(x-3)
+    } else if (x >=10 && x < 20) {
+        y=x/2-1.5
+    }
+    console.log(y.toFixed(3))
+</script>
+
+<script id="ch0104/14" type="ch0104/14">
+    var weight = Number(prompt("weight: ", "1200"))
+    var emergency = prompt("emergency: ", "y")
+    var fee
+    var extra
+    if (weight <= 500) {
+        fee = 4
+    } else if (weight <= 1000) {
+        fee = 8
+    } else if (weight > 1000) {
+        extra = (weight - 1000) / 500
+        if (extra <= 1) {
+            extra = 1
+            fee = 8 + (4 * extra)
+        } else {
+            fee = 8 + (4 * extra)
+        }
+    }
+    if (emergency == "y") {
+        fee = fee + 5
+    } 
+    console.log(fee)
+
+</script>
+
+<script id="ch0104/15" type="ch0104/15">
+    var a = Number(prompt("Number: ","10"))
+    var b = Number(prompt("Number: ","20"))
+    var c = Number(prompt("Number: ","56"))
+    console.log(Math.max(a,b,c))
+</script>
+
+<script id="ch0104/16" type="ch0104/16">
+    var a = Number(prompt("Number: ","3"))
+    var b = Number(prompt("Number: ","4"))
+    var c = Number(prompt("Number: ","5"))
+    if (a + b > c && b + c > a && a + c > b) {
+        console.log("yes")
+    } else {
+        console.log("no")
+    }
+</script>
+
+<script id="ch0104/17" type="ch0104/17">
+    var a = Number(prompt("Number: ","2006"))
+    if (a % 400 == 0 && a != 3200) {
+        console.log("Y")
+    } else if (a % 4 == 0 && 4 % 100 != 0 && a != 3200) {
+        console.log("Y")
+    } else if (a % 3200 == 0) {
+        console.log("N")
+    } else {
+        console.log("N")
+    }
+</script>
+
+<script id="ch0104/18" type="ch0104/18">
+    var x = Number(prompt("x: ","1"))
+    var y = Number(prompt("y: ","1"))
+    if (x <= 1 && x >= -1 && y <= 1 && y >= -1) {
+        console.log("yes")
+    } else {
+        console.log("no")
+    }
+</script>
+
+<script id="ch0104/19" type="ch0104/19">
+    var a = Number(prompt("Number: ","1"))
+    var b = Number(prompt("Number: ","2"))
+    var c = prompt("N: ","+")
+    var result
+    if (c == "+") {
+        result = a + b
+    } else if (c == "-") {
+        result = a - b
+    } else if (c == "*") {
+        result = a * b
+    } else if (c == "/") {
+        if (b == 0) {
+            result = "Divided by zero!"
+        } else {
+            result = a / b
+        }
+    } else {
+        result = "Invalid operator!"
+    }
+    console.log(result)
+</script>
+
+<script id="ch0104/20" type="ch0104/20">
+
+</script>
+
+<script id="ch0104/21" type="ch0104/21">
+    var n = Number(prompt("Total: ","10"))
+    var x = Number(prompt("Eatingspeed: ", "4"))
+    var y = Number(prompt("leftTime: ", "9"))
+    var counter = 0
+    while (y > x) {
+        y = y - x
+        counter++
+    } 
+
+    if (y - x != 0) {
+        counter++
+    }
+    var leftApple = n - counter
+    console.log(leftApple)
 </script>
