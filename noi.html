@@ -777,8 +777,7 @@
     }
 </script>
 
-<script id="ch0105/17" xtype="ch0105/17">
-debugger
+<script id="ch0105/17" type="ch0105/17">
     var k = Number(prompt("Number: ","19"))
     var a = 1
     var b = 1
@@ -797,13 +796,183 @@ debugger
 </script>
 
 <script id="ch0105/18" type="ch0105/18">
-
+    var n = Number(prompt("Number: ","5"))
+    var cocktail = 0
+    var rest = 0
+    for (var i = 0; i< n; i++) {
+        var a = Number(prompt("Number: ","125"))
+        var b = Number(prompt("Number: ","99"))
+        if (i == 0) {
+            cocktail = b / a
+        } else {
+            rest = b / a
+            if (rest - cocktail > 0.05) {
+                console.log("better")
+            } else if (cocktail - rest > 0.05) {
+                console.log("worse")
+            } else {
+                console.log("same")
+            }
+        }
+    }
 </script>
 
 <script id="ch0105/19" type="ch0105/19">
-
+    var n = Number(prompt("Number: ","1"))
+    for (var i = 0; i< n; i++) {
+        var x = Number(prompt("Number: ","30"))
+        var y = Number(prompt("Number: ","40"))
+        var people = Number(prompt("Number: ","3"))
+        var distance = Math.ceil((Math.sqrt(x**2 + y**2)))
+        var dstTime = (distance / 50) * 2
+        var boardingTime = Math.ceil(people * (1 + 0.5))
+        var totalTime = dstTime + boardingTime
+        console.log(totalTime)
+    }
 </script>
 
 <script id="ch0105/20" type="ch0105/20">
+    var h = Number(prompt("Number: ","20"))
+    var count = 0
+    var tenth = 0
+    for (var i = 0; i < 10; i++) {
+        count = count + h + (h / 2) 
+        h = (h / 2)
+        if (i == 9) {
+            tenth = h
+        }
+    }
+    console.log(count, tenth)
+</script>
+
+<script id="ch0105/21" type="ch0105/21">
+    var h = Number(prompt("Number: ","5"))
+    var calc
+    while (h != 1) {
+        if (h % 2 != 0) {
+            calc = ((h * 3) + 1)
+            console.log(h + "*3+1=" + calc)
+            h = calc
+        } else {
+            calc = (h / 2)
+            console.log(h + "/2=" + calc)
+            h = calc
+        }
+    }
+    console.log("End")
+</script>
+
+<script id="ch0105/22" type="ch0105/22">
+debugger
+    var month = 0
+    var save = 0
+    var income = 300
+    var giveMom = 0
+    var leftMoney = 0
+    var total = 0
+    for ( var i = 0; i < 12; i++) {
+        var spend = Number(prompt("Number: ", "290"))
+        month += 1
+        save = income - spend + leftMoney
+        if (save < 0) {
+            console.log("-" + month)
+            break
+        }
+        while (save >= 100) {
+            save = save -100
+            giveMom += 100
+        }
+        
+        leftMoney = save
+        if (i == 11) {
+            total = (giveMom * 0.2) + giveMom + leftMoney
+            console.log(total)
+        }
+    }
+    
+</script>
+
+<script id="ch0105/23" type="ch0105/23">
+    var m = Number(prompt("Number: ", "30"))
+    var n = Number(prompt("Number: ", "6"))
+    var left = m
+    var count = n
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: ", "10"))
+        if(left - a >= 0) {
+            left = left - a
+            count = count - 1
+        } else {
+            continue
+        }
+    }
+    console.log(count)
+</script>
+
+<script id="ch0105/24" type="ch0105/24">
+    var n = Number(prompt("Number: ", "4"))
+    var count = 0
+    var countMax = 0
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: ", "100"))
+        var b = Number(prompt("Number: ", "80"))
+        if (a >= 90 && a <= 140 && b >= 60 && b <= 90) {
+            count +=1
+            if (count > countMax) {
+                countMax = count
+            }
+        } else {
+            count = 0
+        }
+    }
+    console.log(countMax)
+</script>
+
+<script id="ch0105/25" type="ch0105/25">
+11111111111111111111111
+</script>
+
+<script id="ch0105/26" type="ch0105/26">
+    var n = Number(prompt("Number: ", "5"))
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: ", "1234"))
+
+    }
+
+</script>
+
+<script id="ch0105/27" xtype="ch0105/27">
+
+</script>
+
+<script id="ch0105/28" xtype="ch0105/28">
+
+</script>
+
+<script id="ch0105/29" type="ch0105/29">
+
+</script>
+
+<script id="ch0105/30" type="ch0105/30">
+
+</script>
+
+<script id="ch0105/31" type="ch0105/31">
+
+</script>
+
+<script id="ch0105/32" type="ch0105/32">
+
+</script>
+
+<script id="ch0105/33" type="ch0105/33">
+
+</script>
+
+<script id="ch0105/34" type="ch0105/34">
+
+</script>
+
+<script id="ch0105/35" type="ch0105/35">
 
 </script>
