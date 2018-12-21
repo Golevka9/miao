@@ -300,7 +300,7 @@
 <script id="ch0104/04" type="ch0104/04">
     var n = prompt("Code: ", "A")
     var nASCII = n.charCodeAt()
-    if (nASCII % 2 == 0) {
+    if (nASCII % 2 != 0) {
         console.log("YES")
     } else {
         console.log("NO")
@@ -499,7 +499,31 @@
 </script>
 
 <script id="ch0104/20" type="ch0104/20">
-
+    var a = Number(prompt("Number: ","1.0"))
+    var b = Number(prompt("Number: ","2.0"))
+    var c = Number(prompt("Number: ","8.0"))
+    var delta = b**2 - 4 * a * c
+    if (delta > 0) {
+        var x1 = (-b + sqrt(delta))/(2*a)
+        var x2 = (-b - sqrt(delta))/(2*a)
+        console.log("x1=" + x1 + ";","x2=" + x2) 
+    } else if (delta == 0) {
+        var x = -b / (2 * a)
+        console.log("x1=x2=" + x)
+    } else {
+        delta = -delta
+        var sqrtDelta = Math.sqrt(delta)
+        var x1imag = sqrtDelta / (2 * a)
+        var x1real = -b / (2 * a)
+        if (x1imag ===1) {
+            x1imag = "i"
+        } else if (x1imag === -1) {
+            x1imag = "-i"
+        } else {
+            x1imag = x1imag + "i"
+        }
+        console.log("x1=" + x1imag + x1real)
+    }
 </script>
 
 <script id="ch0104/21" type="ch0104/21">
@@ -517,4 +541,269 @@
     }
     var leftApple = n - counter
     console.log(leftApple)
+</script>
+
+<script id="ch0105/01" type="ch0105/01">
+    var n = Number(prompt("Number: ", "2"))
+    var sum = 0
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: " + (i + 1), "18"))
+        sum += a
+    }
+    console.log((sum / n).toFixed(2))
+</script>
+
+<script id="ch0105/02" type="ch0105/02">
+    var sum = 0
+    for (var i = 0; i < 12; i++) {
+        var n = Number(prompt("Number: "+ (i + 1)))
+        sum += n
+    }
+    var avg = (sum / 12).toFixed(2)
+    console.log("$"+avg)
+</script>
+
+<script id="ch0105/03" type="ch0105/03">
+    var n = Number(prompt("Number: ", "2"))
+    var sum = 0
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: " + (i + 1), "1.0"))
+        sum += a
+    }
+    var avg = (sum / n).toFixed(4)
+    console.log(avg)
+</script>
+
+<script id="ch0105/04" type="ch0105/04">
+    var n = Number(prompt("Number: ", "4"))
+    var sum = 0
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: " + (i + 1), "344"))
+        sum += a
+    }
+    var abs = (sum / n).toFixed(5)
+    console.log(sum, abs)
+</script>
+
+<script id="ch0105/05" type="ch0105/05">
+    var n = Number(prompt("Number: ", "5"))
+    var nMax = -Infinity
+    for (var i = 0; i < n; i++) {
+        score = Number(prompt("Number: ", "85"))
+        if (score > nMax) {
+            nMax = score
+        }
+    }
+    console.log(nMax)
+</script>
+
+<script id="ch0105/06" type="ch0105/06">
+    var n = Number(prompt("Number: ", "6"))
+    var nMax = -Infinity
+    var nMin = Infinity
+    for (var i = 0; i < n; i++) {
+        score = Number(prompt("Number: ", "3"))
+        if (score > nMax) {
+            nMax = score
+        }
+        if (score < nMin) {
+            nMin = score
+        }
+    }
+    console.log(nMax - nMin)
+</script>
+
+<script id="ch0105/07" type="ch0105/07">
+    var days = Number(prompt("days: ", "3"))
+    var goldCount = 0
+    var sliverCount = 0
+    var copperCount = 0
+    for (var i = 0; i < days; i++) {
+        var gold = Number(prompt("gold: ", "1"))
+        var sliver = Number(prompt("sliver: ", "0"))
+        var copper = Number(prompt("copper: ", "3"))
+        goldCount += gold
+        sliverCount += sliver
+        copperCount += copper
+    }
+    var total = (goldCount + sliverCount + copperCount)
+    console.log(goldCount, sliverCount, copperCount, total)
+</script>
+
+<script id="ch0105/08" type="ch0105/08">
+    var shape = Number(prompt("shape: ", "3"))
+    var total = 0
+    for (var i = 0; i < (shape - 1); i++) {
+        var ang = Number(prompt("angle: " + (i  + 1), "45"))
+        total += ang
+    }
+    var left = 180 - total
+    console.log(left)
+</script>
+
+<script id="ch0105/09" type="ch0105/09">
+    var m = Number(prompt("Number: ","7"))
+    var n = Number(prompt("Number: ","15"))
+    var sum = 0
+    while (m > n) {
+        var m = Number(pormpt("Invalid Number: ","7"))
+    }
+    while (n > 300) {
+        var n = Number(pormpt("Invalid Number: ","15"))
+    }
+    for (var i = m; i <= n; ) {
+        if (i % 2 != 0) {
+            sum += i
+            i += 2
+        } else {
+            i += 1
+            sum += i
+        }
+    }
+    console.log(sum)
+</script>
+
+<script id="ch0105/10" type="ch0105/10">
+    var m = Number(prompt("Number: ","50"))
+    var n = Number(prompt("Number: ","85"))
+    var sum = 0
+    while (m < 0) {
+        var m = Number(pormpt("Invalid Number: ","50"))
+    }
+    while (n > 1000) {
+        var n = Number(pormpt("Invalid Number: ","85"))
+    }
+    for (var i = m; i <= n; i++) {
+        if (i % 17 == 0) {
+            sum += i 
+        }
+    }
+    console.log(sum)
+</script>
+
+<script id="ch0105/11" type="ch0105/11">
+    var k = Number(prompt("Number: ","5"))
+    var counter1 = 0
+    var counter5 = 0
+    var counter10 = 0
+    for (var i = 0; i < k; i++) {
+        var n = Number(prompt("Number: ","1"))
+        while (n < 0 || n > 10) {
+            var n = Number(prompt("Invalid Number: ","1"))
+        }
+        if (n === 1) {
+            counter1++
+        } else if (n ===5) {
+            counter5++
+        } else if (n ===10) {
+            counter10++
+        }
+    }
+    console.log(counter1)
+    console.log(counter5)
+    console.log(counter10)
+</script>
+
+<script id="ch0105/12" type="ch0105/12">
+    var n = Number(prompt("Number: ","3"))
+    var m = Number(prompt("Number: ","2"))
+    var same = 0
+    for(var i = 0; i < n; i++) {
+        var a = Number(prompt("Number: ","2"))
+        if (a == m) {
+            same++
+        }
+    }
+    console.log(same)
+</script>
+
+<script id="ch0105/13" type="ch0105/13">
+    var a = Number(prompt("Number: ","2"))
+    var n = Number(prompt("Number: ","3"))
+    var result = 1
+    while (a < -1000000 || a > 1000000) {
+        var a = Number(pormpt("Invalid Number: ","2"))
+    }
+    while (n < 1 || n > 10000) {
+        var m = Number(pormpt("Invalid Number: ","3"))
+    }
+    for (var i = 0; i < n; i++) {
+        result = result * a
+    }
+    console.log(result)
+
+</script>
+
+<script id="ch0105/14" type="ch0105/14">
+    var x = Number(prompt("Number: ","13"))
+    var n = Number(prompt("Number: ","10"))
+    var result = x
+    for (var i = 0; i < n; i++) {
+        result = (result * 0.001) + result
+    }
+    console.log((result).toFixed(4))
+</script>
+
+<script id="ch0105/15" type="ch0105/15">
+    var r = Number(prompt("Number: ","5"))
+    var m = Number(prompt("Number: ","5000"))
+    var y = Number(prompt("Number: ","4"))
+    var rate = (100 + r) / 100
+    var result = m
+    for (var i = 0; i < y; i++) {
+        result = (rate * result) 
+    }
+    console.log(parseInt(result))
+    
+</script>
+
+<script id="ch0105/16" type="ch0105/16">
+    var n = Number(prompt("Number: ","50"))
+    var k = Number(prompt("Number: ","10"))
+    var rate = k / 100
+    var price = 200
+    var income = 0
+    for (var i = 0; income < price; i++) {
+        income += n
+        if (i >= 1){
+            price = (price * rate) + price
+        }
+        if (income >= price) {
+            console.log(i + 1)
+        } else if (i == 20) {
+            console.log("Impossible")
+            break
+        }
+    }
+</script>
+
+<script id="ch0105/17" xtype="ch0105/17">
+debugger
+    var k = Number(prompt("Number: ","19"))
+    var a = 1
+    var b = 1
+    var result = 0
+    while (k < 1 || k > 46) {
+        var k = Number(pormpt("Invalid Number: ","19"))
+    }
+    for (var i = 0; i < (k - 1); i++) {
+        if (i == 0) {
+            result = result + 1
+        } else {
+            result = result * 2
+        }
+    }
+    console.log(result)
+</script>
+
+<script id="ch0105/18" type="ch0105/18">
+
+</script>
+
+<script id="ch0105/19" type="ch0105/19">
+
+</script>
+
+<script id="ch0105/20" type="ch0105/20">
+
 </script>
