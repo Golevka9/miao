@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  var xsolid = 0
+  var xdotted = 0
+  var xdouble1 = 0
+  var xdouble2 = 0
+  var xtrible1 = 0
+  var xtrible2 = 0
+  var xtrible3 = 0
+  var distance45 = 0
+  var x45 = 0
+  var y45 = 0
+  var xdiagonal = 0
+  var ydiagonal = 0
+  for (var i = 0; i <= 400; i ++) {
+    dot(xsolid += 1 , 30, 'black')
+    if (i == 0) {
+      dot(0, 30, 'black')
+    }
+  }
+  for (var i = 0; i <= 400; i ++) {
+    dot(xdotted += 2 , 50, 'black')
+    if (i == 0) {
+      dot(0, 50, 'black')
+    }
+  }
+  for (var i = 0; i <= 400; i ++) {
+      dot(xdouble1 += 0, 70, 'black')
+      dot(xdouble2 = xdouble1 + 1, 70, 'black')
+      xdouble1 +=4
+  }
+  for (var i = 0; i <= 400; i ++) {
+      dot(xtrible1 += 0, 90, 'black')
+      dot(xtrible2 = xtrible1 + 1, 90, 'black')
+      dot(xtrible3 = xtrible2 + 1, 90, 'black')
+      xtrible1 +=5
+  }
+  
+  var distance45 = (Math.sqrt(300**2 + 300**2))
+  for (var i = 0; i <= distance45; i ++) {
+      dot(x45 += 1, (y45 += 1), 'black')
+      if (i == 0) {
+      dot(0, 0, 'black')
+    }
+  }
+  var diagonal = (Math.sqrt(400**2 + 300**2))
+  var diagonalAngle = 0.335
+  var aaa = 1
+  console.log(diagonalAngle)
+  for (var i = 0; i <= diagonal; i ++) {
+      dot(xdiagonal = diagonalAngle * aaa + aaa, ydiagonal = aaa, 'black')
+      aaa +=1
+      if (i == 0) {
+      dot(0, 0, 'black')
+    }
+  }
+
+  for (var i = 0; i <= 100; i ++) {
+    dot(100 +i, 100, 'black')
+    dot(100 +i, 200, 'black')
+    dot(100, 100 + i,'black')
+    dot(200, 100 + i,'black')
+  }
+  for (var i = 0; i <= 100; i ++) {
+    dot(250 +i, 100, 'gold')
+    dot(250 +i, 200, 'gold')
+    dot(250, 100 + i,'gold')
+    dot(350, 100 + i,'gold')
+    for (var y = 0; y <=98; y++) {
+      for(var x = 0; x<= 98; x++) {
+      dot(251 + x, 101+y, 'gold')
+      }
+
+    }
+    
+  }
+</script>
+</html>
