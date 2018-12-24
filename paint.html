@@ -104,17 +104,35 @@
     dot(200, 100 + i,'black')
   }
   for (var i = 0; i <= 100; i ++) {
-    dot(250 +i, 100, 'gold')
-    dot(250 +i, 200, 'gold')
-    dot(250, 100 + i,'gold')
-    dot(350, 100 + i,'gold')
+    dot(250 +i, 110, 'gold')
+    dot(250 +i, 210, 'gold')
+    dot(250, 110 + i,'gold')
+    dot(350, 110 + i,'gold')
     for (var y = 0; y <=98; y++) {
       for(var x = 0; x<= 98; x++) {
-      dot(251 + x, 101+y, 'gold')
+      dot(251 + x, 111+y, 'gold')
       }
 
     }
     
+  }
+
+  var cx = 0
+  var cy = 0
+  var cz = 0
+  for (var i = 0; i <= 100; i ++) {
+      dot(250 +i, 0)
+      dot(250 +i, 100)
+      dot(250, 0 + i)
+      dot(350, 0 + i)
+
+    for (var y = 0; y <=98; y++) {
+      for(var x = 0; x<= 98; x++) {
+        dot(251 + x, 1+y, "rgb(100,0,255)")
+        cx += 4
+      }
+      cy += 4
+  }
   }
 </script>
 </html>
