@@ -1145,17 +1145,80 @@ if (turn % 2 === 1) {
 <script type="not run" id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几">
 
 </script>
-<script type="not run" id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
+<script type="111" id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
+    var isCompleteNumber = function(n) {
+        vas sum = 0
+        for (var i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum += i
+            }
+        }
+        if (sum == n) {
+            return true
+        } else {
+            return false
+        }
+    }
+    var n = +prompt()
+    if (isCompleteNumber(n)) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
+</script>
+<script type="111" id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数">
+    var isCompleteNumber = function(n) {
+        vas sum = 0
+        for (var i = 1; i < n; i++) {
+            if (n % i == 0) {
+                sum += i
+            }
+        }
+        if (sum == n) {
+            return true
+        } else {
+            return false
+        }
+    }
+    for(var i = 0; i < 10000; i++) {
+        if (isCompleteNumber(i)) {
+            console.log(i)
+        }
+    }
+</script>
+<script type="111" id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数">
+    var notaPrime = function(x) {
+        for (var i = 2; i < x; i++) {
+            if(x % i ==0) {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+    var n = +prompt()
+    if (!notaPrime(x)) {
+        console.log('YES')
+    } else {
+        console.log('NO')
+    }
 
 </script>
-<script type="not run" id="complete-numbers" sample-input="" sample-output="" comment="输出10000以内所有的完全数">
-
-</script>
-<script type="not run" id="prime" sample-input="7" sample-output="YES" comment="判断一个数是否为素数">
-
-</script>
-<script type="not run" id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数">
-
+<script type="111" id="primes" sample-input="" sample-output="" comment="输出100以内所有的素数">
+    var notaPrime = function(x) {
+        for (var i = 2; i < x; i++) {
+            if(x % i ==0) {
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+    for(var i = 0; i < 100; i++) {
+        if (!notaPrime(x)) {
+            console.log(i)
+        }
+    }
 </script>
 <script type="not run" id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串，即实现Number函数的功能，不可使用+号或者Number函数">
 
