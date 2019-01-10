@@ -37,5 +37,5 @@ var golevka9 = {
       other.push(value[i])
     }
     return other
-  },
+  }
 }
