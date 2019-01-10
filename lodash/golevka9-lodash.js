@@ -22,5 +22,20 @@ var golevka9 = {
       }
     }
     return result
-  }
+  },
+  concat: function concat(arr, ...value) {
+    var other = []
+    var arrSum = 0
+    while (arr.length > 0) {
+      arrSum += arr.pop()
+    }
+    other.push(arrSum)
+    for (var i = 0; i < value.length; i++) {
+      if (typeof value[i] =='object') {
+        value[i] = value[i].pop()
+      }
+      other.push(value[i])
+    }
+    return other
+  },
 }
