@@ -37,5 +37,47 @@ var golevka9 = {
       other.push(value[i])
     }
     return other
-  }
+  },
+  difference: function difference(arr, ...value) {
+    let result = []
+    let compare = []
+    for (var i = 1; i < arguments.length; i++) {
+        compare = compare.concat(arguments[i])
+    }
+    for (var o = 0; o < arr.length; o++) {
+        if (compare.indexOf(arr[o]) === -1) {
+            result.push(arr[o])
+        }
+    }
+    return result
+  },
+  drop: function drop(arr, n = 1) {
+    return arr.slice(n)
+  },
+  dropRight: function dropRight(arr, n = 1) {
+    for (var i = 0; i < n; i++) {
+      arr.pop()
+    }
+    return arr
+  },
+  fill: function fill(arr, value, start = 0, end = array.length) {
+    for (var i = start; i < end; i ++) {
+      arr[i] = value
+    }
+    return arr
+  },
+  flatten: function flatten(arr) {
+    var result = []
+    for (var i = 0; i < arr.length; i++) {
+      if (typeof arr[i] =='object') {
+        for (var j = 0; j < arr[i].length; j++) {
+          result.push(arr[i][j])
+        }
+      }
+      else {
+        result.push(arr[i])
+      }
+    }
+    return result
+  },
 }
