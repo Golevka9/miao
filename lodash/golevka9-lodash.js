@@ -69,7 +69,7 @@ var golevka9 = {
   flatten: function flatten(arr) {
     var result = []
     for (var i = 0; i < arr.length; i++) {
-      if (typeof arr[i] =='object') {
+      if (Array.isArray(arr[i])) {
         for (var j = 0; j < arr[i].length; j++) {
           result.push(arr[i][j])
         }
@@ -79,5 +79,8 @@ var golevka9 = {
       }
     }
     return result
+  },
+  head: function head(arr) {
+    return arr[0]
   },
 }
