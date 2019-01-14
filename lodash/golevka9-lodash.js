@@ -60,7 +60,7 @@ var golevka9 = {
     }
     return arr
   },
-  fill: function fill(arr, value, start = 0, end = array.length) {
+  fill: function fill(arr, value, start = 0, end = arr.length) {
     for (var i = start; i < end; i ++) {
       arr[i] = value
     }
@@ -82,5 +82,19 @@ var golevka9 = {
   },
   head: function head(arr) {
     return arr[0]
+  },
+  indexOf: function indexOf(arr, value, fromIndex = 0) {
+    var i = 0
+    if (fromIndex > 0) {
+      i = fromIndex
+    } else if (fromIndex < 0) {
+      i = arr.length + fromIndex
+    }
+    for (; i < arr.length; i ++) {
+      if (value == arr[i]) {
+        return i
+      } 
+    }
+    return -1
   },
 }
