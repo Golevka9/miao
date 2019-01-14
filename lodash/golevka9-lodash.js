@@ -73,13 +73,24 @@ var golevka9 = {
         for (var j = 0; j < arr[i].length; j++) {
           result.push(arr[i][j])
         }
-      }
-      else {
+      } else {
         result.push(arr[i])
       }
     }
     return result
   },
+  // flattenDeep: function flattenDeep(arr) {
+  //   var result = []
+  //   for (var i = 0; i < arr.length; i++) {
+  //     if (Array.isArray(arr[i])) {
+  //       arr = arr.concat(...arr[i])
+  //       i--
+  //     } else {
+  //       result.push(arr[i])
+  //     }
+  //   }
+  //   return result
+  // },
   head: function head(arr) {
     return arr[0]
   },
@@ -96,5 +107,9 @@ var golevka9 = {
       } 
     }
     return -1
+  },
+  initial: function initial(arr) {
+    arr.length = arr.length - 1
+    return arr
   },
 }
