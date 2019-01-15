@@ -79,18 +79,30 @@ var golevka9 = {
     }
     return result
   },
-  // flattenDeep: function flattenDeep(arr) {
-  //   var result = []
-  //   for (var i = 0; i < arr.length; i++) {
-  //     if (Array.isArray(arr[i])) {
-  //       arr = arr.concat(...arr[i])
-  //       i--
-  //     } else {
-  //       result.push(arr[i])
-  //     }
-  //   }
-  //   return result
-  // },
+  flattenDeep: function flattenDeep(arr) {
+    var result = []
+    for (var item of arr) {
+      if (Array.isArray(item)) {
+        result.push(...flattenDeep(item))
+      } else {
+        result.push(item)
+      }
+    }
+    return result
+  },
+  flattenDepth: function flattenDepth(ary, depth = 1) {
+    if (depth == 0) {
+      return ary.slice()
+    }
+    return ary.reduce((result, item) => {
+      if (Array.isArray(item)) {
+        result.push(...flattenDepth(item, depth - 1))
+      } else {
+        result.push(item)
+      }
+      return result
+    }, [])
+  }, 
   head: function head(arr) {
     return arr[0]
   },
