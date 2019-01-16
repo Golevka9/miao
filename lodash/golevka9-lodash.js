@@ -162,12 +162,22 @@ var golevka9 = {
     }
     return arr
   },
-  pullAll: function pullAll(arr, ...value) {
-    for (var v of value) {
-      while (arr.indexOf(v) != -1) {
-        var c = arr.indexOf(v)
+  pullAll: function pullAll(arr, value) {
+    for (var v = 0; v < value.length; v++) {
+      while (arr.indexOf(value[v]) != -1) {
+        var c = arr.indexOf(value[v])
         arr.splice(c, 1)
       }
+    }
+    return arr
+  },
+  reverse: function reverse(arr) {
+    var l = Math.floor(arr.length / 2)
+    var t = 0
+    for (var i = 0; i < l; i++) {
+      t = arr[i]
+      arr[i] = arr[arr.length -1 - i]
+      arr[arr.length -1 - i] = t
     }
     return arr
   },
