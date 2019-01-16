@@ -200,10 +200,11 @@ var golevka9 = {
     if (value < min) return 0
     if (value > max) return l
     while (value === middle) {
-      if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+      if (value == arr[middleIndex] && value > arr[middleIndex - 1]) {
         return middleIndex
       }
       middleIndex--
+      middle = arr[middleIndex]
       }
       while (value != middle) {
         if (middle > value) {
