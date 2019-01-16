@@ -124,4 +124,26 @@ var golevka9 = {
     arr.length = arr.length - 1
     return arr
   },
+  join: function join(arr, separator=',') {
+    var result = ""
+    var l = arr.length
+    for (var i = 0; i < l; i++) {
+      result += arr.shift()
+      if (i != l - 1) {
+        result += separator
+      }
+    }
+    return result
+  },
+  last: function last(arr) {
+    return arr[arr.length -1]
+  },
+  lastIndexOf: function lastIndexOf(arr, value, fromIndex=arr.length-1) {
+    for (var i = fromIndex; i >=0; i--) {
+      if (arr[i] === value) {
+        return i
+      }
+    }
+  },
+  
 }
