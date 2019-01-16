@@ -197,11 +197,14 @@ var golevka9 = {
     var max = arr[l - 1]
     var middleIndex = Math.floor(l / 2)
     var middle = arr[middleIndex]
-    if (value < min) {
-      return 0
-    } else if (value > max) {
-      return l
-    } else {
+    if (value < min) return 0
+    if (value > max) return l
+    while (value === middle) {
+      if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+        return middleIndex
+      }
+      middleIndex--
+      }
       while (value != middle) {
         if (middle > value) {
           if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
@@ -219,7 +222,6 @@ var golevka9 = {
           middle = arr[middleIndex]
         }
       }
-      return middleIndex
-    }
   },
+  
 }
