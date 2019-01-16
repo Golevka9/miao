@@ -144,6 +144,32 @@ var golevka9 = {
         return i
       }
     }
+    return -1
   },
-  
+  nth: function nth(arr, n = 0) {
+    if (n >= 0) {
+      return arr[n]
+    } else {
+      return arr[arr.length + n]
+    }
+  },
+  pull: function pull(arr, ...value) {
+    for (var v of value) {
+      while (arr.indexOf(v) != -1) {
+        var c = arr.indexOf(v)
+        arr.splice(c, 1)
+      }
+    }
+    return arr
+  },
+  pullAll: function pullAll(arr, ...value) {
+    for (var v of value) {
+      while (arr.indexOf(v) != -1) {
+        var c = arr.indexOf(v)
+        arr.splice(c, 1)
+      }
+    }
+    return arr
+  },
+
 }
