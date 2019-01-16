@@ -224,5 +224,71 @@ var golevka9 = {
         }
       }
   },
+  sortedIndexOf: function sortedIndexOf(arr, value) {
+    var l = arr.length
+    var min = arr[0]
+    var max = arr[l - 1]
+    var middleIndex = Math.floor(l / 2)
+    var middle = arr[middleIndex]
+    if (value < min) return 0
+    if (value > max) return l
+    while (value === middle) {  //sortedIndex
+      if (value == arr[middleIndex] && value > arr[middleIndex - 1]) {
+        return middleIndex
+      }
+      middleIndex--
+      middle = arr[middleIndex]
+      }
+      while (value != middle) {
+        if (middle > value) {
+          if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+            return middleIndex
+          }
+          max = middle
+          middleIndex = Math.floor(middleIndex - ((l - middleIndex) / 2))
+          middle = arr[middleIndex]
+        } else {
+          if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+            return middleIndex
+          }
+          min = middle
+          middleIndex = Math.floor(middleIndex + ((l - middleIndex) / 2))
+          middle = arr[middleIndex]
+        }
+      }
+  },
+  sortedLastIndex: function sortedLastIndex(arr, value) {
+    var l = arr.length
+    var min = arr[0]
+    var max = arr[l - 1]
+    var middleIndex = Math.floor(l / 2)
+    var middle = arr[middleIndex]
+    if (value < min) return 0
+    if (value > max) return l
+    while (value === middle) {  //sortedLastIndex
+      if (value == arr[middleIndex] && value < arr[middleIndex + 1]) {
+        return middleIndex
+      }
+      middleIndex++
+      middle = arr[middleIndex]
+      }
+      while (value != middle) {
+        if (middle > value) {
+          if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+            return middleIndex
+          }
+          max = middle
+          middleIndex = Math.floor(middleIndex - ((l - middleIndex) / 2))
+          middle = arr[middleIndex]
+        } else {
+          if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+            return middleIndex
+          }
+          min = middle
+          middleIndex = Math.floor(middleIndex + ((l - middleIndex) / 2))
+          middle = arr[middleIndex]
+        }
+      }
+  },
   
 }
