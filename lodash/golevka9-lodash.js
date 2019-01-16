@@ -267,7 +267,7 @@ var golevka9 = {
     if (value > max) return l
     while (value === middle) {  //sortedLastIndex
       if (value == arr[middleIndex] && value < arr[middleIndex + 1]) {
-        return middleIndex
+        return middleIndex + 1 
       }
       middleIndex++
       middle = arr[middleIndex]
@@ -290,5 +290,13 @@ var golevka9 = {
         }
       }
   },
-  
+  sortedUniq: function sortedUniq(arr) {
+    var result = []
+    for (var i = 0; i < arr.length; i++) {
+      if (!(result.includes(arr[i]))) {
+        result.push(arr[i])
+      }
+    }
+    return result
+  },
 }
