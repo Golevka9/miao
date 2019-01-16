@@ -181,5 +181,45 @@ var golevka9 = {
     }
     return arr
   },
-
+  slice: function slice(arr, start = 0, end = arr.length) {
+    var result = []
+    if (end > arr.length) {
+      end = arr.length
+    }
+    for (var i = start; i < end; i++) {
+      result.push(arr[i])
+    }
+    return result
+  },
+  sortedIndex: function sortedIndex(arr, value) {
+    var l = arr.length
+    var min = arr[0]
+    var max = arr[l - 1]
+    var middleIndex = Math.floor(l / 2)
+    var middle = arr[middleIndex]
+    if (value < min) {
+      return 0
+    } else if (value > max) {
+      return l
+    } else {
+      while (value != middle) {
+        if (middle > value) {
+          if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+            return middleIndex
+          }
+          max = middle
+          middleIndex = Math.floor(middleIndex - ((l - middleIndex) / 2))
+          middle = arr[middleIndex]
+        } else {
+          if (value < arr[middleIndex] && value > arr[middleIndex - 1]) {
+            return middleIndex
+          }
+          min = middle
+          middleIndex = Math.floor(middleIndex + ((l - middleIndex) / 2))
+          middle = arr[middleIndex]
+        }
+      }
+      return middleIndex
+    }
+  },
 }
