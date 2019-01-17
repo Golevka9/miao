@@ -299,4 +299,21 @@ var golevka9 = {
     }
     return result
   },
+  tail: function tail(arr) {
+    return arr.slice(1)
+  },
+  take: function take(arr, n = 1) {
+    return arr.slice(0,n)
+  },
+  takeRight: function takeRight(arr, n = 1) {
+    var result = []
+    if (n > arr.length) {
+      n = arr.length
+    }
+    for (var i = 0; i < n; i++) {
+      result.unshift(arr.pop())
+    }
+    return result
+  },
+
 }
