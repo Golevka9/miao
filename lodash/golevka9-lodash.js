@@ -315,5 +315,26 @@ var golevka9 = {
     }
     return result
   },
-
+  union: function union(...arr) {
+    var result = []
+    for (var i = 0; i < arguments.length; i++) {
+      var j = 0
+      while (j < arr[i].length) {
+        if (result.indexOf(arr[i][j]) == -1) {
+          result.push(arr[i][j])
+        }
+        j++
+      }
+    }
+    return result
+  },
+  uniq: function uniq(arr) {
+    var result = []
+    for (var i = 0; i < arr.length; i++) {
+      if (result.indexOf(arr[i]) == -1) {
+        result.push(arr[i])
+      }
+    }
+    return result
+  },
 }
