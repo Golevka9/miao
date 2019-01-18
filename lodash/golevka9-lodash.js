@@ -376,31 +376,20 @@ var golevka9 = {
     return result
   },
   xor: function xor(...arr) {
-    var record = {};
-    var nums1 = arguments[0]
-    var nums2 = arguments[1]
-    if (!nums2) {
-      return nums1
-    }
-    for (let i = 0; i < nums1.length; i++) {
-        if (record[nums1[i]]) {
-            record[nums1[i]]++;
+    var record = {}
+    var result = []
+    for (var i = 0; i < arr.length; i++) {
+      for (var j = 0; j < arr[i].length; j++) {
+        if (!record[arr[i][j]]) {
+          record[arr[i][j]] = 1
         } else {
-            record[nums1[i]] = 1;
+          record[arr[i][j]]++
         }
-    }
-    for (let i = 0; i < nums2.length; i++) {
-      if (record[nums2[i]]) {
-          record[nums2[i]]++;
-      } else {
-          record[nums2[i]] = 1;
       }
-  }
-    var result = [];
+    }
     for (var index in record) {
-      if (record[index] < 2) {
+      if (record[index] == 1) {
         result.push(+index)
-        record[index]++
       }
     }
     return result;
