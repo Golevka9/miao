@@ -337,4 +337,30 @@ var golevka9 = {
     }
     return result
   },
+  zip: function zip(...arr) {
+    var result = []
+    for (var i = 0; i < arguments[0].length; i++) {
+      result.push([])
+    }
+    for (var i = 0; i < arguments[i].length; i++) {
+      for (var j = 0; j < arguments.length; j++) {
+        result[i][j] = arguments[j][i]
+      }
+    }
+    return result
+  },
+  unzip: function unzip(arr) {
+    var result = []
+    var outsideL = arguments[0][0].length
+    var insideL = arguments[0].length
+    for (var i = 0; i < outsideL; i++) {
+      result.push([])
+    }
+    for (var i = 0; i < outsideL; i++) {
+      for (var j = 0; j < insideL; j++) {
+        result[i][j] = arguments[0][j][i]
+      }
+    }
+    return result
+  },
 }
