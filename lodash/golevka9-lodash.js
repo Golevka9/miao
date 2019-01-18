@@ -363,4 +363,46 @@ var golevka9 = {
     }
     return result
   },
+  without: function without(arr, ...value) {
+    if (!value) {
+      return arr
+    }
+    var result = []
+    for (var i = 0; i < arr.length; i++) {
+      if (!(value.includes(arr[i]))) {
+        result.push(arr[i])
+      }
+    }
+    return result
+  },
+  xor: function xor(...arr) {
+    var record = {};
+    var nums1 = arguments[0]
+    var nums2 = arguments[1]
+    if (!nums2) {
+      return nums1
+    }
+    for (let i = 0; i < nums1.length; i++) {
+        if (record[nums1[i]]) {
+            record[nums1[i]]++;
+        } else {
+            record[nums1[i]] = 1;
+        }
+    }
+    for (let i = 0; i < nums2.length; i++) {
+      if (record[nums2[i]]) {
+          record[nums2[i]]++;
+      } else {
+          record[nums2[i]] = 1;
+      }
+  }
+    var result = [];
+    for (var index in record) {
+      if (record[index] < 2) {
+        result.push(+index)
+        record[index]++
+      }
+    }
+    return result;
+  },
 }
